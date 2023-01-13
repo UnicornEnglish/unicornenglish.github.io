@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap');
+
+html, body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("media/background.jpg");
+
+    display: grid;
+    grid-template-columns: minmax(auto, 350px) 2fr;
+    grid-template-rows: 3fr 1fr 5fr;
+
+    background-color: #d8c3a5;
+    background-size: cover;
+}
+
+*
+{
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+header
+{
+    height: 30%;
+}
+
+.card
+{
+    padding: 0.5em 2em 0 0.5em;
+    margin: 2em 0em 0em 2em;
+
+    max-height: 100%;
+    color: #e85a4f;
+
+    border-right: 5px solid;
+    border-image: linear-gradient(#e85a4f, #e98074) 30;
+}
+
+.card > img
+{
+    width: 100%;
+    max-height: 100%;
+    border-radius: 50%;
+    box-shadow: 0px 1px 10px 0px #8d8e8a;
+}
+
+.card > p
+{
+    background-color: hsl(47deg 16% 83%);
+    font-size: xx-large;
+    text-align: center;
+    margin: 0;
+    padding: 0.2em 0.6em;
+    clip-path: polygon(5% 0, 95% 0, 100% 20%, 100% 80%, 95% 100%, 5% 100%, 0% 80%, 0% 20%);
+}
+
+.text
+{
+    background-color: hsl(47deg 16% 83%);
+    margin: 2em 0 0 0;
+    font-size: larger;
+    grid-column: 1 / span 2;
+    grid-row: 2;
+
+    text-indent: 2em;
+    margin-top: 2em;
+    padding: 0.5em 10% 0.5em 10%;
+
+    box-shadow: 0px 0px 5px black;
+}
+
+.contact 
+{
+    grid-column: 1 / span 2;
+    grid-row: 3;
+
+    display: grid;
+    grid-template-rows: minmax(250px, 1fr);
+    grid-template-columns: 1fr minmax(300px, 2fr) 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.contact div
+{
+    grid-column: 2;
+    background-color: #e98074;
+    border: 2px solid #e85a4f;
+    margin: 2em;
+
+    width: 20em;
+    height: fit-content;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+}
+
+h2
+{
+    text-align: center;
+    color: #e85a4f;
+    text-shadow: 0 0 6px #fff;
+    text-decoration: underline;
+    font-size: xx-large;
+
+    margin-top: 1.25em;
+}
+
+.contact > div a
+{
+    display: none;
+}
+
+.contact > div:hover a
+{
+    display: block;
+}
+
+a
+{
+    margin-bottom: 1.25em;
+    text-decoration: underline;
+    font-size: large;
+    text-align: center;
+    color: black;
+}
+
+@media (max-width: 600px)
+{
+    body
+    {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 1024px) {
+    body
+    {
+        background-size: auto;
+    }
+}
